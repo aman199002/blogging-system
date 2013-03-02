@@ -16,6 +16,10 @@ $rails server     # To start Rails Server
 
 ======
 
+Admin can edit and delete blogs & categories.
+
+*http://blogging-system.herokuapp.com/admin*
+
 Users can also pull content from mobile phones using json request.
 
 *All categories : http://blogging-system.herokuapp.com/categories.json*
@@ -30,5 +34,4 @@ And can also comment using post request.
 
 http://blogging-system.herokuapp.com/post_comment.json?blog_id=1&comment=comment
 
-======
 This application is also available on heroku. You can access the app with http://blogging-system.herokuapp.com/.
