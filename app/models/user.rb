@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true, :uniqueness => {:case_sensitive => false}
   validates :password, :confirmation => true
 
-  before_save :encrypt_password
+  before_create :encrypt_password
 
   def self.authenticate(email, password)
     user = find_by_email(email)    
