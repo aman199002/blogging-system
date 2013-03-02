@@ -19,8 +19,11 @@ $rails server     # To start Rails Server
 Users can also pull content from mobile phones using json request.
 
 All categories : http://blogging-system.herokuapp.com/categories.json
+======
 All blogs: http://blogging-system.herokuapp.com/blogs.json
+======
 Specific category: http://blogging-system.herokuapp.com/categories/1.json
+======
 Specific blog: http://blogging-system.herokuapp.com/blogs/1.json
 
 And can also comment using post request.
