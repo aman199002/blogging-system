@@ -16,12 +16,15 @@ $rails server     # To start Rails Server
 
 ======
 
-*Users can also pull content from mobile phones using json request.
+Users can also pull content from mobile phones using json request.
 
-*_All categories : http://blogging-system.herokuapp.com/categories.json_
-*_All blogs: http://blogging-system.herokuapp.com/blogs.json_
-*_Specific category: http://blogging-system.herokuapp.com/categories/1.json_
-*_Specific blog: http://blogging-system.herokuapp.com/blogs/1.json_
+*All categories : http://blogging-system.herokuapp.com/categories.json*
+
+*All blogs: http://blogging-system.herokuapp.com/blogs.json*
+
+*Specific category: http://blogging-system.herokuapp.com/categories/1.json*
+
+*Specific blog: http://blogging-system.herokuapp.com/blogs/1.json*
 
 And can also comment using post request.
 
