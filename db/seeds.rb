@@ -7,4 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.create(:email => "admin@gmail.com", :password => "password", :confirm_password => "password").make_admin
+user = User.create(:email => "admin@gmail.com", :password => "password", :password_confirmation => "password")
+user.make_admin
