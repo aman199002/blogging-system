@@ -6,6 +6,8 @@ SurveApp::Application.routes.draw do
 
   post "post_comment" => "comments#create_comment_from_json", :as => :post_comment
 
+  delete "comment/:id" => "comments#destroy", :as => :comment
+
   #post "comments" => "comments#create"
 
   resources :blogs do
