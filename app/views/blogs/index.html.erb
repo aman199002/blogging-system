@@ -1,0 +1,27 @@
+<h1>Listing blogs</h1>
+
+<table class="table">
+  <tr>
+    <th>Title</th>    
+    <th>Published</th>
+    <% if current_user && current_user.admin? %>
+      <th></th>
+      <th></th>    
+    <% end %>  
+  </tr>
+
+<% @blogs.each do |blog| %>
+  <tr>
+    <td><%= link_to blog.title, blog %></td>    
+    <td><%= blog.published %></td>    
+    <% if current_user && current_user.admin? %>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Blog', new_blog_path if current_user && current_user.admin? %>

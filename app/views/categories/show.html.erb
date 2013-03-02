@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @category.name %>
+</p>
+
+<p class="wordwrap">
+  <b>Description:</b>
+  <%= @category.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_path(@category) if current_user && current_user.admin?%> |
+<%= link_to 'Back', categories_path %>

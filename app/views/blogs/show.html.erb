@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @blog.title %>
+</p>
+
+<p class="wordwrap">
+  <b>Content:</b>
+  <%= @blog.content %>
+</p>
+
+<p>
+  <b>Categories:</b>
+  <%= @blog.categories.map(&:name).join(",") %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%= @blog.published %>
+</p>
+
+<p class="wordwrap">
+  <b>Commetns:</b>
+  <br/>
+  <% @blog.comments.each do |comment| %>
+    <span class="wordwrap">
+      <%= comment.comment %> 
+    </span>
+    <span class="pull-right">
+      posted <%= time_ago_in_words(comment.updated_at) %> before
+    </span>
+    <br/>
+  <% end %>
+</p>
+
+
+<br/><br/>
+<%= simple_form_for [@blog,@blog.comments.new] do |f| %>
+  <%= f.input :comment, :input_html => {:rows => 2} %>
+  <%= f.submit %>
+<% end %>	
+
+
+<br/><br/>
+
+<%= link_to 'Edit', edit_blog_path(@blog) if current_user && current_user.admin? %>
+<%= link_to 'Back', blogs_path %>

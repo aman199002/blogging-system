@@ -1,0 +1,22 @@
+<h1>Listing comments</h1>
+
+<table class="table">
+  <tr>
+    <th>Comment</th>    
+    <th>Blog</th>
+    <th>Posted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.comment %></td>    
+    <td><%= comment.commentable.title %></td>    
+    <td><%= comment.created_at %></td>    
+  </tr>
+<% end %>
+</table>
+
+<br />
